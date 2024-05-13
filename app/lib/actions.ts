@@ -126,6 +126,7 @@ export async function authenticate(
 ) {
     try {
         await signIn('credentials', formData);
+        window.location.href = '/dashboard';
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {
